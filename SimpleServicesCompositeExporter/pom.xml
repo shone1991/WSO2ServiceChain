@@ -13,6 +13,9 @@
     <com.example.resource_._RequestMapping_inputSchema>capp/EnterpriseServiceBus</com.example.resource_._RequestMapping_inputSchema>
     <com.example.resource_._RequestMapping>capp/EnterpriseServiceBus</com.example.resource_._RequestMapping>
     <com.example.endpoint_._QueryDoctorEP>capp/EnterpriseServiceBus</com.example.endpoint_._QueryDoctorEP>
+    <com.example.sequence_._PaymentRequestProcessingSequence>capp/EnterpriseServiceBus</com.example.sequence_._PaymentRequestProcessingSequence>
+    <com.example.message-store_._PaymentRequestMessageStore>capp/EnterpriseServiceBus</com.example.message-store_._PaymentRequestMessageStore>
+    <com.example.message-processors_._PaymentRequestProcessor>capp/EnterpriseServiceBus</com.example.message-processors_._PaymentRequestProcessor>
     <com.example.endpoint_._ClemencyEP>capp/EnterpriseServiceBus</com.example.endpoint_._ClemencyEP>
     <com.example.endpoint_._PineValleyEP>capp/EnterpriseServiceBus</com.example.endpoint_._PineValleyEP>
     <com.example.endpoint_._ChannelingFeeEP>capp/EnterpriseServiceBus</com.example.endpoint_._ChannelingFeeEP>
@@ -24,32 +27,26 @@
   </properties>
   <dependencies>
     <dependency>
-      <groupId>com.example.api</groupId>
-      <artifactId>HealthcareAPI</artifactId>
+      <groupId>com.example.resource</groupId>
+      <artifactId>RequestMapping_outputSchema</artifactId>
+      <version>1.0.0</version>
+      <type>zip</type>
+    </dependency>
+    <dependency>
+      <groupId>com.example.endpoint</groupId>
+      <artifactId>ChannelingFeeEP</artifactId>
+      <version>1.0.0</version>
+      <type>xml</type>
+    </dependency>
+    <dependency>
+      <groupId>com.example.endpoint</groupId>
+      <artifactId>SettlePaymentEP</artifactId>
       <version>1.0.0</version>
       <type>xml</type>
     </dependency>
     <dependency>
       <groupId>com.example.endpoint</groupId>
       <artifactId>QueryDoctorEP</artifactId>
-      <version>1.0.0</version>
-      <type>xml</type>
-    </dependency>
-    <dependency>
-      <groupId>com.example.endpoint</groupId>
-      <artifactId>ClemencyEP</artifactId>
-      <version>1.0.0</version>
-      <type>xml</type>
-    </dependency>
-    <dependency>
-      <groupId>com.example.endpoint</groupId>
-      <artifactId>GrandOakEP</artifactId>
-      <version>1.0.0</version>
-      <type>xml</type>
-    </dependency>
-    <dependency>
-      <groupId>com.example.endpoint</groupId>
-      <artifactId>PineValleyEP</artifactId>
       <version>1.0.0</version>
       <type>xml</type>
     </dependency>
@@ -66,10 +63,10 @@
       <type>zip</type>
     </dependency>
     <dependency>
-      <groupId>com.example.resource</groupId>
-      <artifactId>RequestMapping_outputSchema</artifactId>
+      <groupId>com.example.endpoint</groupId>
+      <artifactId>GrandOakEP</artifactId>
       <version>1.0.0</version>
-      <type>zip</type>
+      <type>xml</type>
     </dependency>
     <dependency>
       <groupId>com.example.resource</groupId>
@@ -78,14 +75,38 @@
       <type>zip</type>
     </dependency>
     <dependency>
-      <groupId>com.example.endpoint</groupId>
-      <artifactId>ChannelingFeeEP</artifactId>
+      <groupId>com.example.api</groupId>
+      <artifactId>HealthcareAPI</artifactId>
       <version>1.0.0</version>
       <type>xml</type>
     </dependency>
     <dependency>
       <groupId>com.example.endpoint</groupId>
-      <artifactId>SettlePaymentEP</artifactId>
+      <artifactId>ClemencyEP</artifactId>
+      <version>1.0.0</version>
+      <type>xml</type>
+    </dependency>
+    <dependency>
+      <groupId>com.example.endpoint</groupId>
+      <artifactId>PineValleyEP</artifactId>
+      <version>1.0.0</version>
+      <type>xml</type>
+    </dependency>
+    <dependency>
+      <groupId>com.example.message-processors</groupId>
+      <artifactId>PaymentRequestProcessor</artifactId>
+      <version>1.0.0</version>
+      <type>xml</type>
+    </dependency>
+    <dependency>
+      <groupId>com.example.message-store</groupId>
+      <artifactId>PaymentRequestMessageStore</artifactId>
+      <version>1.0.0</version>
+      <type>xml</type>
+    </dependency>
+    <dependency>
+      <groupId>com.example.sequence</groupId>
+      <artifactId>PaymentRequestProcessingSequence</artifactId>
       <version>1.0.0</version>
       <type>xml</type>
     </dependency>
